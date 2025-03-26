@@ -1,0 +1,8 @@
+- hosts: all
+  become: true
+  pre_tasks:
+    - name: Run "apt-get update" to avoid error 404
+      ansible.builtin.apt:
+        update_cache: yes
+  roles:
+    - role: geerlingguy.pip
