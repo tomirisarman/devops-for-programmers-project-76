@@ -13,14 +13,6 @@
         src: templates/docker-compose.yml.j2
         dest: /var/tmp/docker-compose.yml
 
-#    - name: Install certificates
-#      ansible.builtin.shell: |
-#        mkdir -p ~/.mysql && \
-#        wget "https://storage.yandexcloud.kz/cloud-certs/CA.pem" \
-#        --output-document ~/.mysql/root.crt && \
-#        chmod 0600 ~/.mysql/root.crt
-
-
     - name: Create and start services
       community.docker.docker_compose_v2:
         project_src: /var/tmp
@@ -29,3 +21,7 @@
     - name: Show results
       ansible.builtin.debug:
         var: output
+
+    - name: Import the Datadog Agent role from the Datadog collection
+      import_role:
+        name: datadog.dd.agent

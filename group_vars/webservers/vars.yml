@@ -8,3 +8,12 @@ pip_install_packages:
 redmine_db_mysql: db
 redmine_db_password: password
 redmine_secret_key_base: supersecretkey
+
+datadog_checks:
+  process:
+    init_config:
+    instances:
+      - name: vm1
+        url: http://94.131.82.254:8080
+      - name: vm2
+        url: http://94.131.84.138:8080
