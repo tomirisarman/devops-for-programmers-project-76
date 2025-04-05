@@ -1,10 +1,10 @@
 - hosts: all
   become: true
-  gather_facts: False
   pre_tasks:
     - name: Run "apt-get update" to avoid error 404
       ansible.builtin.apt:
         update_cache: yes
+        cache_valid_time: 3600
   roles:
     - role: geerlingguy.pip
   tasks:
@@ -12,7 +12,14 @@
       ansible.builtin.template:
         src: templates/docker-compose.yml.j2
         dest: /var/tmp/docker-compose.yml
-      register: docker_compose_copy
+
+#    - name: Install certificates
+#      ansible.builtin.shell: |
+#        mkdir -p ~/.mysql && \
+#        wget "https://storage.yandexcloud.kz/cloud-certs/CA.pem" \
+#        --output-document ~/.mysql/root.crt && \
+#        chmod 0600 ~/.mysql/root.crt
+
 
     - name: Create and start services
       community.docker.docker_compose_v2:
