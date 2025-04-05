@@ -13,7 +13,5 @@ datadog_checks:
   process:
     init_config:
     instances:
-      - name: vm1
-        url: http://94.131.82.254:8080
-      - name: vm2
-        url: http://94.131.84.138:8080
+      - name: localhost
+        url: http://0.0.0.0:8080
