@@ -1,8 +1,24 @@
 - hosts: all
   become: true
+  gather_facts: False
   pre_tasks:
     - name: Run "apt-get update" to avoid error 404
       ansible.builtin.apt:
         update_cache: yes
   roles:
     - role: geerlingguy.pip
+  tasks:
+    - name: Copy docker-compose.yml file
+      ansible.builtin.template:
+        src: templates/docker-compose.yml.j2
+        dest: /var/tmp/docker-compose.yml
+      register: docker_compose_copy
+
+    - name: Create and start services
+      community.docker.docker_compose_v2:
+        project_src: /var/tmp
+      register: output
+
+    - name: Show results
+      ansible.builtin.debug:
+        var: output
