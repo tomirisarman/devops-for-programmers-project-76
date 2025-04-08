@@ -6,8 +6,6 @@ pip_install_packages:
   - name: docker-compose
 
 redmine_db_mysql: db
-redmine_db_password: password
-redmine_secret_key_base: supersecretkey
 
 datadog_checks:
   process:

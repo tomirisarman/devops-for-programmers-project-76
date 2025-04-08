@@ -1,0 +1,8 @@
+mysql_database: example_db
+mysql_host: example.host
+mysql_user: user
+mysql_password: password
+redmine_db_password: password
+redmine_secret_key_base: secretkey
+datadog_api_key: apikey
+datadog_site: us5.datadoghq.com

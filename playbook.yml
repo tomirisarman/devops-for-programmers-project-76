@@ -8,6 +8,11 @@
   roles:
     - role: geerlingguy.pip
   tasks:
+    - name: Copy .env file
+      ansible.builtin.template:
+        src: templates/.env.j2
+        dest: /var/tmp/.env
+
     - name: Copy docker-compose.yml file
       ansible.builtin.template:
         src: templates/docker-compose.yml.j2
