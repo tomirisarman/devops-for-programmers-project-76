@@ -27,9 +27,6 @@
       ansible.builtin.debug:
         var: output
 
-- hosts: webservers
-  become: true
-  tasks:
     - name: Import the Datadog Agent role from the Datadog collection
       import_role:
         name: datadog.dd.agent

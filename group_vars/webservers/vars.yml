@@ -1,0 +1,7 @@
+datadog_api_key: "{{vault_datadog_api_key}}"
+datadog_checks:
+  process:
+    init_config:
+    instances:
+      - name: localhost
+        url: http://0.0.0.0:8080
