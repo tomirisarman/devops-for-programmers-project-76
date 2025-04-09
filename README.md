@@ -15,3 +15,5 @@ Setup and deploy Redmine project:
 ```
 make deploy
 ```
+
+Project link: http://redmine76.space/
