@@ -1,4 +1,4 @@
-datadog_api_key: "{{vault_datadog_api_key}}"
+datadog_disable_untracked_checks: true
 datadog_checks:
   process:
     init_config:
