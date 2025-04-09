@@ -6,3 +6,4 @@ pip_install_packages:
   - name: docker-compose
 
 redmine_db_mysql: db
+datadog_api_key: "{{vault_datadog_api_key}}"
