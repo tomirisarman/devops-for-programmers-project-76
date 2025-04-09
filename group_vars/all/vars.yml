@@ -7,7 +7,8 @@ pip_install_packages:
 
 redmine_db_mysql: db
 
-datadog_api_key: {{vault_datadog_api_key}}
+datadog_site: us5.datadoghq.com
+datadog_api_key: "{{vault_datadog_api_key}}"
 datadog_checks:
   process:
     init_config:
