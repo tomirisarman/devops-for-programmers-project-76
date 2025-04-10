@@ -20,4 +20,8 @@ Setup and deploy Redmine project:
 make deploy
 ```
 
+
 Project link: http://redmine76.space/
+
+
+<img src="https://screenshare.ru/image/7f9fc600-0b18-4a14-8dd7-33831f5085b3.png">
