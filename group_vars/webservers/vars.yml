@@ -1,3 +1,15 @@
+mysql_image_version: 8.0
+mysql_database: "{{vault.mysql_database}}"
+mysql_host: "{{vault.mysql_host}}"
+mysql_user: "{{vault.mysql_user}}"
+mysql_password: "{{vault.mysql_password}}"
+
+redmine_image_version: 6.0.4
+redmine_port: 8080
+redmine_db_mysql: db
+redmine_db_password: "{{vault.redmine_db_password}}"
+redmine_secret_key_base: "{{vault.redmine_secret_key_base}}"
+
 datadog_api_key: "{{vault.datadog_api_key}}"
 datadog_site: us5.datadoghq.com
 datadog_disable_untracked_checks: true
