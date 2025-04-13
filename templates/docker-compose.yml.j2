@@ -1,10 +1,10 @@
 version: '3.1'
 services:
   redmine:
-    image: redmine
+    image: redmine:{{redmine_image_version}}
     restart: always
     ports:
-      - 8080:3000
+      - {{redmine_port}}:3000
   db:
-    image: mysql:8.0
+    image: mysql:{{mysql_image_version}}
     restart: always
