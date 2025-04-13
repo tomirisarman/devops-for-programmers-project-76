@@ -4,7 +4,7 @@ services:
     image: redmine:{{redmine_image_version}}
     restart: always
     ports:
-      - {{redmine_port}}:3000
+      - "{{redmine_port}}:3000"
   db:
     image: mysql:{{mysql_image_version}}
     restart: always
