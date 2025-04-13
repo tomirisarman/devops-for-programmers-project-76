@@ -2,6 +2,7 @@
 [![Actions Status](https://github.com/tomirisarman/devops-for-programmers-project-76/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/tomirisarman/devops-for-programmers-project-76/actions)
 
 Requirements:
+- Docker
 - Ansible
 
 
